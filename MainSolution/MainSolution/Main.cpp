@@ -81,7 +81,7 @@ int main(int argc, const char* argv[])
 				int prod_id = std::stoi(order_buffer);
 				if (customer->orders.find(prod_id) == customer->orders.end())
 				{
-					customer->orders.insert(prod_id, 1);
+					customer->orders.emplace(prod_id, 1);
 				}
 				else
 				{
