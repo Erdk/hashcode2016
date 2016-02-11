@@ -20,6 +20,16 @@ int distance(Point a, Point b)
     return (int) ceil(sqrt(pow(a.x - b.x, 2.0) + pow(a.y - b.y, 2.0)));
 }
 
+int customer_weight(Customer c)
+{
+	int weight = 0;
+	for (auto it = c.orders.cbegin(); it != c.orders.cend(); ++it)
+	{
+		weight += (products[it->first].weight * it->second);
+	}
+	return weight;
+}
+
 Drone find_drone(Customer c)
 {
     int dst = INT_MAX;
@@ -118,3 +128,4 @@ int main(int argc, const char* argv[])
 	return 0;
 }
 
+	
