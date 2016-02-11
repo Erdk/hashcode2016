@@ -16,12 +16,12 @@ vector<Warehouse> warehouses;
 vector<Customer> customers;
 
 int distance_c_w(Customer c, Warehouse w) {
-    return (int) ceil(sqrt(pow(c.x - w.x, 2.0) + pow(c.y - w.y, 2.0)));
+	return (int) ceil(sqrt(pow(c.x - w.x, 2.0) + pow(c.y - w.y, 2.0)));
 }
 
 int main(int argc, const char* argv[])
 {
-	scanf("%d %d %d %d %d", &rows, &cols, &total_drones, &turns, &max_payload);
+	scanf_s("%d %d %d %d %d", &rows, &cols, &total_drones, &turns, &max_payload);
 	string product_line;
 	string buffer;
 	getline(cin, product_line);
@@ -34,11 +34,11 @@ int main(int argc, const char* argv[])
 		products.push_back(Product(std::stoi(buffer)));
 	}
 	
-	scanf("%d", &total_warehouses);
+	scanf_s("%d", &total_warehouses);
 	for (int it = 0; it < total_warehouses; it++)
 	{
 		int war_x, war_y;
-		scanf("%d %d", war_x, war_y);
+		scanf_s("%d %d", war_x, war_y);
 		Warehouse* warehouse = new Warehouse(war_x, war_y);
 		string warhouse_prod;
 		getline(cin, warhouse_prod);
@@ -61,15 +61,15 @@ int main(int argc, const char* argv[])
 		}
 	}
 
-	scanf("%d", &total_orders);
+	scanf_s("%d", &total_orders);
 
 	for (int it = 0; it < total_orders; it++)
 	{
 		int loc_x, loc_y;
-		scanf("%d %d", loc_x, loc_y);
+		scanf_s("%d %d", loc_x, loc_y);
 		Customer* customer = new Customer(loc_x, loc_y);
 		int number_of_prod_orders;
-		scanf("%d", &number_of_prod_orders);
+		scanf_s("%d", &number_of_prod_orders);
 		for (int prod_order_it = 0; prod_order_it < number_of_prod_orders; prod_order_it++)
 		{
 			string orders;

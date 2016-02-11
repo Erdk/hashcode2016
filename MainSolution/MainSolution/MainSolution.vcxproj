@@ -146,6 +146,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="drone.h" />
     <ClInclude Include="Main.h" />
   </ItemGroup>
   <ItemGroup>
