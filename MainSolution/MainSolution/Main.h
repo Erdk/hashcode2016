@@ -1,8 +1,9 @@
-#include <stdio.h>
-#include <iostream>
-using namespace std;
+#ifndef _MAIN_H_
+#define _MAIN_H_
 
-int main()
-{
-	return 0;
-}
+#include <iostream>
+
+// defs
+//
+
+#endif
