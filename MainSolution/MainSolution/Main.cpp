@@ -14,6 +14,11 @@ int total_orders = 0;
 vector<Product> products;
 vector<Warehouse> warehouses;
 vector<Customer> customers;
+
+int distance_c_w(Customer c, Warehouse w) {
+    return (int) ceil(sqrt(pow(c.x - w.x, 2.0) + pow(c.y - w.y, 2.0)));
+}
+
 int main(int argc, const char* argv[])
 {
 	scanf("%d %d %d %d %d", &rows, &cols, &total_drones, &turns, &max_payload);
