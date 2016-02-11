@@ -36,6 +36,8 @@ void process_customer(Customer c, Drone d)
 int main(int argc, const char* argv[])
 {
 	scanf("%d %d %d %d %d", &rows, &cols, &total_drones, &turns, &max_payload);
+
+	scanf("%d", &total_products);
 	string product_line;
 	string buffer;
 	getline(cin, product_line);
