@@ -37,7 +37,7 @@ int main(int argc, const char* argv[])
 	scanf_s("%d", &total_warehouses);
 	for (int it = 0; it < total_warehouses; it++)
 	{
-		int war_x, war_y;
+		int war_x = 0, war_y = 0;
 		scanf_s("%d %d", war_x, war_y);
 		Warehouse* warehouse = new Warehouse(war_x, war_y);
 		string warhouse_prod;
@@ -65,7 +65,7 @@ int main(int argc, const char* argv[])
 
 	for (int it = 0; it < total_orders; it++)
 	{
-		int loc_x, loc_y;
+		int loc_x = 0, loc_y = 0;
 		scanf_s("%d %d", loc_x, loc_y);
 		Customer* customer = new Customer(loc_x, loc_y);
 		int number_of_prod_orders;
