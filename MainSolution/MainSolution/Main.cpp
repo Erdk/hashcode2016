@@ -1,5 +1,4 @@
 #include "Main.h"
-#include "drone.h"
 
 using namespace std;
 
@@ -14,9 +13,24 @@ int total_orders = 0;
 vector<Product> products;
 vector<Warehouse> warehouses;
 vector<Customer> customers;
+vector<Drone> drones;
 
-int distance_c_w(Customer c, Warehouse w) {
-    return (int) ceil(sqrt(pow(c.x - w.x, 2.0) + pow(c.y - w.y, 2.0)));
+int distance(Point a, Point b)
+{
+    return (int) ceil(sqrt(pow(a.x - b.x, 2.0) + pow(a.y - b.y, 2.0)));
+}
+
+Drone find_drone(Customer c)
+{
+    int distance;
+    int drone;
+    for (int i = 0; i < total_drones; i++) { }
+
+    return Drone();
+}
+
+void process_customer(Customer c, Drone d)
+{
 }
 
 int main(int argc, const char* argv[])
@@ -38,7 +52,7 @@ int main(int argc, const char* argv[])
 	for (int it = 0; it < total_warehouses; it++)
 	{
 		int war_x, war_y;
-		scanf("%d %d", war_x, war_y);
+		scanf("%d %d", &war_x, &war_y);
 		Warehouse* warehouse = new Warehouse(war_x, war_y);
 		string warhouse_prod;
 		getline(cin, warhouse_prod);
@@ -66,7 +80,7 @@ int main(int argc, const char* argv[])
 	for (int it = 0; it < total_orders; it++)
 	{
 		int loc_x, loc_y;
-		scanf("%d %d", loc_x, loc_y);
+		scanf("%d %d", &loc_x, &loc_y);
 		Customer* customer = new Customer(loc_x, loc_y);
 		int number_of_prod_orders;
 		scanf("%d", &number_of_prod_orders);
@@ -91,6 +105,7 @@ int main(int argc, const char* argv[])
 		}
 		customers.push_back(*customer);
 	}
+
 
 	return 0;
 }
