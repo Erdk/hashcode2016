@@ -1,9 +1,9 @@
-CC=g++
-
+CXX=g++
+CXXFLAGS=-std=c++11
 all: main
 
 main: MainSolution/MainSolution/Main.cpp
-	$(CC) -o $@ $<
+	$(CXX) $(CXXFLAGS) -o $@ $<
 
 clean:
 	rm main
