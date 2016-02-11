@@ -1,12 +1,8 @@
 #include "Main.h"
+#include <stdio.h>
 
 
-
-Main::Main()
+int main()
 {
-}
-
-
-Main::~Main()
-{
+	return 0;
 }
