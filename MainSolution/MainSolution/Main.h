@@ -9,6 +9,7 @@
 #include <string>
 #include <sstream>
 #include <cstdlib>
+#include <climits>
 
 using namespace std;
 

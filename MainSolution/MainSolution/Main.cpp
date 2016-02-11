@@ -22,9 +22,17 @@ int distance(Point a, Point b)
 
 Drone find_drone(Customer c)
 {
-    int distance;
+    int distance = INT_MAX;
     int drone;
-    for (int i = 0; i < total_drones; i++) { }
+    for (int i = 0; i < total_drones; i++) {
+        if (!drones[i].free)
+            continue;
+        int c_d_distance = distance(c, drones[i]);
+        if (c_d_distance < distance) {
+            distance = c_d_distance;
+            drone = i;
+        }
+    }
 
     return Drone();
 }
