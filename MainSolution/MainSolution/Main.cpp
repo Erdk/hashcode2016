@@ -50,7 +50,7 @@ int main(int argc, const char* argv[])
 			}
 			else
 			{
-				warehouse->add_product(products.at(prod_id).weight, count);
+				warehouse->add_product(prod_id, products.at(prod_id).weight, count);
 			}
 			prod_id++;
 		}

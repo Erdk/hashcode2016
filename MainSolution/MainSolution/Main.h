@@ -11,6 +11,7 @@ using namespace std;
 
 struct Product
 {
+	int prod_id;
 	int weight;
 	int count;
 	Product(int weight_) : weight(weight_) { }
@@ -20,11 +21,13 @@ struct Product
 struct Warehouse
 {
 	int x, y;
-	vector<Product> products;
+	map<int, Product> products;
+	//vector<Product> products;
 
 	Warehouse(int x_, int y_) : x(x_), y(y_) { }
-	void add_product(int weight, int count) {
-		products.push_back(Product(weight, count));
+	void add_product(int prod_id, int weight, int count) {
+		//products.push_back(Product(weight, count));
+		products.insert(prod_id, Product(weight, count));
 	}
 };
 
