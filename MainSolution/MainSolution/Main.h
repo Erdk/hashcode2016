@@ -32,6 +32,7 @@ struct Customer
 {
 	int x, y;
 	map<int,int> orders;
+	Customer(int location_x_, int location_y_) : x(location_x_), y(location_y_) { }
 };
 
 #endif
