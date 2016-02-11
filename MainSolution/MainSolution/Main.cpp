@@ -84,7 +84,7 @@ int main(int argc, const char* argv[])
 				}
 			}
 		}
-		customers.push_back(customer);
+		customers.push_back(*customer);
 	}
 
 	return 0;
