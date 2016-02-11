@@ -6,6 +6,6 @@ main: MainSolution/MainSolution/Main.cpp
 	$(CC) -o $@ $<
 
 clean:
-	$(rm) -rf main
+	rm main
 
 .PHONY: clean all
